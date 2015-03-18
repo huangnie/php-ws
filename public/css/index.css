@@ -1,0 +1,99 @@
+#main,#operate{
+    margin:10px auto;
+    width:800px;
+    border:solid 1px #CCCCCC;
+    height:500px; font-size:14px;
+    padding: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+
+}
+#main p{
+    line-height:1.8;
+    margin:0px;
+    padding:0px;
+}
+#operate{
+    height:30px;
+    border:0px;
+}
+#chat{
+    display:none;
+}
+#enter{
+    display:block;
+}
+.msg_tip{
+    color:#F33;
+}
+.msg_recv{
+    color:#008040;
+}
+#users{
+    float:right;
+    width:200px;
+    height:480px;
+    padding:10px 0px;
+    overflow:auto;
+    background-color:#F2F2F2;
+}
+#content{
+    float:left;
+    width:580px;
+    height:480px;
+    padding:10px;
+}
+#users a{
+    display:block;
+    line-height:25px;
+    color:#03C;
+    text-decoration:none;
+    padding:0px 10px;
+}
+#users .user_select {
+    background-color:#999;
+    color:#FFF;
+}
+#users a:hover{
+    background-color:#f0f0f0;
+    color:#FFF;
+
+}
+.btn{
+    outline: none;
+    padding: 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+input[type=text]{
+    outline: none;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+
+.confirm{
+    background-color:#008040 ;
+    border: 1px solid #008040;
+}
+.cancel{
+    background: #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
