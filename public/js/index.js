@@ -1,11 +1,11 @@
-var io = null;
+ï»¿var io = null;
     var toUser = 'all';
 
     function enter(){
 
         var name=$('#name').val();
         if(name==''){
-            alert('êÇ³Æ²»ÄÜÎª¿Õ');
+            alert('æ˜µç§°ä¸èƒ½ä¸ºç©º');
             return false;
         }
 
@@ -23,13 +23,13 @@ var io = null;
                     $('#chat').show();
                     $('#enter').hide();
                 }else{
-                    $('#content').append('<p class="msg_tip">½øÈëÊ§°Ü£¡<p>');
+                    $('#content').append('<p class="msg_tip">è¿›å…¥å¤±è´¥ï¼<p>');
                 }
             });
 
             io.on('user', function(users){
                 var usersDiv = $('#users');
-                usersDiv.html($("<a href=\"javascript:;\" onclick=\"selectUser('all',this)\" class=\"user_select\">ËùÓĞÈË</a>"));
+                usersDiv.html($("<a href=\"javascript:;\" onclick=\"selectUser('all',this)\" class=\"user_select\">æ‰€æœ‰äºº</a>"));
                 for(var i in users){
                     usersDiv.append($('<a href="javascript:;" onclick="selectUser(\''+i+'\',this)">'+users[i]+'</a>'));
                 }
@@ -41,12 +41,12 @@ var io = null;
             });
 
             io.on('notice', function(msg){
-                $('#content').append($('<p  class="msg_recv">ÏµÍ³¹«¸æ£º'+ msg +'</p>'));
+                $('#content').append($('<p  class="msg_recv">ç³»ç»Ÿå…¬å‘Šï¼š'+ msg +'</p>'));
                 console.log(msg);
             });
 
             io.on('close', function(){
-                ('#content').append($('<p class="msg_recv">ÍË ³ö</p>'));
+                ('#content').append($('<p class="msg_recv">é€€ å‡º</p>'));
             });
         });
 
@@ -59,7 +59,7 @@ var io = null;
             content:content
         }
         io.emit('msg',data,function(ok){
-            if(ok) ('#content').append($('<p class="msg_recv">ÎÒËµ£º' + content + '</p>'));
+            if(ok) ('#content').append($('<p class="msg_recv">æˆ‘è¯´ï¼š' + content + '</p>'));
         })
     }
 
